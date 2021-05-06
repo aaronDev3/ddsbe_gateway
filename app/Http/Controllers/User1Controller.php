@@ -1,11 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
 
 //use App\Models\User;
 use Illuminate\Http\Response;
 use App\Traits\ApiResponser;
 use Illuminate\Http\Request;
+
 use App\Services\User1Service;
 
 Class User1Controller extends Controller {
