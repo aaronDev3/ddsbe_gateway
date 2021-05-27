@@ -27,6 +27,8 @@ $app->withFacades();
 
 $app->withEloquent();
 
+$app->configure('database');
+
 //registering config files
 
 $app->configure('services'); 
