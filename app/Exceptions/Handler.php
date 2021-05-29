@@ -14,6 +14,7 @@ use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
+use Illuminate\Auth\AuthenticationException;
 
 class Handler extends ExceptionHandler
 {
@@ -85,7 +86,7 @@ class Handler extends ExceptionHandler
             return $this->errorResponse($exception->getMessage(), Response::HTTP_UNAUTHORIZED);
         }
 
-        if ($exception instanceof Unauthenticated) {
+        if ($exception instanceof UnauthenticatedException) {
             return $this->errorResponse($exception->getMessage(), Response::HTTP_UNAUTHORIZED);
         }
 
