@@ -14,7 +14,7 @@ use Illuminate\Validation\ValidationException;
 use Laravel\Lumen\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Throwable;
-use Illuminate\Auth\AuthenticationException;
+//use Illuminate\Auth\AuthenticationException;
 
 class Handler extends ExceptionHandler
 {
