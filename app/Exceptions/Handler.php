@@ -85,6 +85,10 @@ class Handler extends ExceptionHandler
             return $this->errorResponse($exception->getMessage(), Response::HTTP_UNAUTHORIZED);
         }
 
+        if ($exception instanceof Unauthenticated) {
+            return $this->errorResponse($exception->getMessage(), Response::HTTP_UNAUTHORIZED);
+        }
+
         if ($exception instanceof ClientException) {
            
              $message = $exception->getResponse()->getBody();
